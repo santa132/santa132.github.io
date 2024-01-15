@@ -174,7 +174,49 @@
     initJarallax();
     initQuantitySpinner();
 
-
   }); // End of a document
 
 })(jQuery);
+
+var myCarousel = document.querySelector('#carouselExampleDark')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false
+})
+
+function subscribe() {
+  // Biểu thức chính quy kiểm tra định dạng email
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const txtNameValue = document.getElementById('txtName').value.trim();
+  const txtAddressValue = document.getElementById('txtAddress').value.trim();
+  const txtEmailValue = document.getElementById('txtEmail').value.trim();
+  const txtPhoneValue = document.getElementById('txtPhone').value.trim();
+
+  if (txtNameValue === "") {
+    alert("Fill in your name");
+    return false;
+  }
+  if (txtAddressValue === "") {
+    alert("Fill in your address");
+    return false;
+  }
+  if (txtEmailValue === "") {
+    alert("Fill in your Email");
+    return false;
+  }
+  if (!emailRegex.test(txtEmailValue)) {
+    alert("Invalid Email syntax");
+    return false;
+  }
+  if (txtPhoneValue === "") {
+    alert("Fill in your phone number");
+    return false;
+  }
+
+  alert("Send information successful!");
+}
+
+function addToCart(){
+  alert("Add product to cart successfully!");
+}

@@ -1,28 +1,4 @@
-/*
-Theme Name: Ministore
-Theme URI: 
-Author: 
-Author URI: 
-Description: Ministore is specially designed product packaged for Ministore by Moksha.
-Version: 
-*/
 
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
-
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
-
-/*------------------------------------------------
-
-CSS STRUCTURE:
-
-    
-/*--------------------------------------------------------------
-/** 1. VARIABLES
---------------------------------------------------------------*/
 :root {
   --accent-color: #0d0d0d;
   --bs-gray-100: #f3f3f3;
@@ -54,12 +30,7 @@ CSS STRUCTURE:
   --heading-font: "Cinzel", sans-serif;
 }
 
-/*----------------------------------------------*/
-/* 1 GENERAL TYPOGRAPHY */
-/*----------------------------------------------*/
 
-/* 1.1 General Styles
-/*----------------------------------------------*/
 *,
 *::before,
 *::after {
@@ -73,7 +44,7 @@ html {
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
@@ -338,7 +309,7 @@ h5 {
 }
 
 .btn.btn-primary:hover {
-  background-color: var(--bs-dark);
+  background-color: green;
   color: var(--bs-light);
 }
 
@@ -818,79 +789,6 @@ h5 {
   }
 }
 
-/* 2. Billboard
-/*----------------------------------------------*/
-/*------------Swiper Arrow -----------*/
-.banner-content p {
-  width: 50%;
-}
-
-#billboard .swiper-pagination {
-  left: -730px;
-  bottom: 160px;
-}
-
-.swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  position: relative;
-  cursor: pointer;
-  border-color: transparent;
-  transition: border-color 0.3s ease-out;
-}
-
-.swiper-pagination .swiper-pagination-bullet::after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50px;
-  border: 1px solid #4a4a4a;
-  transform: scale(1);
-  transition: transform 0.3s ease-out;
-}
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 10px !important;
-}
-
-.swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active:after,
-.swiper-pagination span.swiper-pagination-bullet:hover:after {
-  transform: scale(2);
-}
-
-@media only screen and (max-width: 1200px) {
-  #billboard .banner-content {
-    background-color: rgba(246, 245, 242, 0.5);
-    height: 100%;
-  }
-
-  .banner-content h1.display-1 {
-    font-size: 4.5em;
-  }
-
-  .banner-content p {
-    width: 90%;
-  }
-
-  #billboard .swiper-pagination {
-    right: 0;
-    bottom: 60px;
-    left: 0;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .banner-content h1.display-1 {
-    font-size: 3.5em;
-  }
-}
-
 /* 3. Icon Box - Company Services
 /*----------------------------------------------*/
 .icon-box-icon.pe-3.pb-3 {
@@ -921,56 +819,6 @@ h5 {
   position: relative !important;
 }
 
-/* 5. Testimonial
-/*----------------------------------------------*/
-.review-item blockquote {
-  font-weight: 300;
-  line-height: 1.8;
-}
-
-.review-content .swiper-arrow {
-  top: 50%;
-  bottom: 0;
-  z-index: 2;
-  border: 1px solid var(--bs-gray-400);
-  color: var(--bs-gray-400);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  transition: 0.4s ease-in-out;
-}
-
-.review-content .swiper-arrow:hover {
-  border: 1px solid var(--bs-dark);
-  color: var(--bs-dark);
-}
-
-.review-content .swiper-arrow.swiper-arrow-prev {
-  left: -80px;
-}
-
-.review-content .swiper-arrow.swiper-arrow-next {
-  right: -80px;
-}
-
-.review-content .quotation svg.quote {
-  color: var(--bs-gray-200);
-}
-
-#testimonials .swiper-pagination {
-  display: none;
-}
-
-@media only screen and (max-width: 901px) {
-  #testimonials .swiper-pagination {
-    display: block;
-    bottom: 60px;
-  }
-
-  .review-content .swiper-arrow {
-    display: none !important;
-  }
-}
 
 /* 6. collections
 /*----------------------------------------------*/
@@ -982,61 +830,6 @@ h5 {
   height: 65px;
 }
 
-/* 9. Brand Collection
-/*----------------------------------------------*/
-#brand-collection a img {
-  opacity: 0.3;
-  transition: opacity 0.3s ease-out;
-}
-#brand-collection a:hover img {
-  opacity: 1;
-}
-
-/* 10. Blog Page
-/*----------------------------------------------*/
-.sidebar .widget-search-bar form {
-  height: 50px;
-}
-
-.sidebar .widget-search-bar form .search-field {
-  width: 100%;
-}
-
-.sidebar .widget-search-bar .search-icon {
-  width: 60px;
-}
-
-/* 10. Shop Page
-/*----------------------------------------------*/
-.product-grid .product-card .cart-concern {
-  bottom: -20px;
-  left: 0;
-  opacity: 0;
-  transition: 0.9s all;
-}
-
-.product-grid .product-card:hover .cart-concern {
-  bottom: 0;
-  opacity: 1;
-  transform: rotate(0deg);
-}
-
-/* 11. Single Product Page
-/*----------------------------------------------*/
-/* product-thumbnail-slider */
-.product-thumbnail-slider {
-  height: 790px;
-}
-
-/* product-info */
-.rating-container .rating svg {
-  color: var(--bs-yellow);
-}
-
-.product-quantity .input-group button.btn-number {
-  width: 100%;
-  height: 100%;
-}
 
 /* product-tabs */
 .product-tabs .nav-tabs .nav-item.show .nav-link,
@@ -1046,40 +839,9 @@ h5 {
   color: var(--bs-light) !important;
 }
 
-/* 12. FAQs Page
-/*----------------------------------------------*/
-.accordion .accordion-button::after {
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
+.carousel-inner img{
+  width: 100%;
+  height: 50vw;
+  margin: auto;
 }
 
-.accordion .accordion-button:not(.collapsed)::after {
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='minus' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
-  transform: rotate(0deg);
-}
-
-/* 13. Blog Page
-/*----------------------------------------------*/
-.pagination .page-link {
-  color: var(--bs-primary);
-  background-color: var(--bs-light);
-  border: 1px solid var(--bs-primary);
-}
-
-.pagination .page-item.active .page-link {
-  color: var(--bs-light);
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-}
-
-.pagination .page-item a.page-link {
-  height: 40px;
-}
-
-.pagination .page-item a.page-link:hover,
-.pagination .page-item a.page-link:focus {
-  background-color: var(--bs-primary);
-  color: var(--bs-light);
-}
